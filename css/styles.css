@@ -1,0 +1,176 @@
+/* Custom styles to enhance Tailwind CSS */
+
+/* Smooth scrolling for the entire page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom gradient backgrounds */
+.gradient-bg {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Card hover effects */
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Loading animations */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.loading-pulse {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Custom prose styles for markdown content */
+.prose-content h2 {
+    @apply text-2xl font-bold text-gray-900 mt-8 mb-4;
+}
+
+.prose-content h3 {
+    @apply text-xl font-semibold text-gray-900 mt-6 mb-3;
+}
+
+.prose-content p {
+    @apply text-gray-700 mb-4 leading-relaxed;
+}
+
+.prose-content ul {
+    @apply list-disc list-inside mb-4 text-gray-700;
+}
+
+.prose-content ol {
+    @apply list-decimal list-inside mb-4 text-gray-700;
+}
+
+.prose-content li {
+    @apply mb-2;
+}
+
+.prose-content strong {
+    @apply font-semibold text-gray-900;
+}
+
+.prose-content em {
+    @apply italic;
+}
+
+.prose-content blockquote {
+    @apply border-l-4 border-blue-500 pl-4 italic text-gray-600 my-4;
+}
+
+.prose-content code
+{
+    @apply bg-gray-100 px-2 py-1 rounded text-sm font-mono;
+}
+
+.prose-content pre {
+    @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4;
+}
+
+.prose-content pre code {
+    @apply bg-transparent p-0;
+}
+
+/* Newsletter specific styles */
+.newsletter-header {
+    background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+}
+
+/* Button styles */
+.btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+}
+
+.btn-primary:disabled {
+    @apply bg-gray-400 cursor-not-allowed;
+}
+
+.btn-secondary {
+    @apply bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+}
+
+/* Status indicators */
+.status-positive {
+    @apply bg-green-100 text-green-800;
+}
+
+.status-negative {
+    @apply bg-red-100 text-red-800;
+}
+
+.status-neutral {
+    @apply bg-gray-100 text-gray-800;
+}
+
+.status-warning {
+    @apply bg-yellow-100 text-yellow-800;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 640px) {
+    .mobile-stack {
+        @apply flex-col space-y-4;
+    }
+    
+    .mobile-full {
+        @apply w-full;
+    }
+}
+
+/* Focus states for accessibility */
+.focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+}
+
+/* Animation for content loading */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
+}
+
+/* Print styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+    
+    .print-break {
+        page-break-before: always;
+    }
+}

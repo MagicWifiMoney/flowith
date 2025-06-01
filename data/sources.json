@@ -1,0 +1,50 @@
+[
+  {
+    "name": "The Points Guy",
+    "url": "https://thepointsguy.com",
+    "description": "Travel rewards and credit card reviews",
+    "category": "blog"
+  },
+  {
+    "name": "Doctor of Credit",
+    "url": "https://doctorofcredit.com",
+    "description": "Credit card and bank bonus tracking",
+    "category": "blog"
+  },
+  {
+    "name": "NerdWallet",
+    "url": "https://nerdwallet.com",
+    "description": "Credit card comparisons and financial advice",
+    "category": "comparison"
+  },
+  {
+    "name": "Bankrate",
+    "url": "https://bankrate.com",
+    "description": "Credit card rates and expert reviews",
+    "category": "news"
+  },
+  {
+    "name": "Forbes Advisor",
+    "url": "https://forbes.com/advisor",
+    "description": "Personal finance and credit card guidance",
+    "category": "news"
+  },
+  {
+    "name": "Consumer Financial Protection Bureau",
+    "url": "https://consumerfinance.gov",
+    "description": "Government consumer finance protection",
+    "category": "government"
+  },
+  {
+    "name": "CreditCards.com",
+    "url": "https://creditcards.com",
+    "description": "Credit card news and consumer education",
+    "category": "news"
+  },
+  {
+    "name": "Frequent Miler",
+    "url": "https://frequentmiler.com",
+    "description": "Credit card offers and strategy analysis",
+    "category": "blog"
+  }
+]

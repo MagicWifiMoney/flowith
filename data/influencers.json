@@ -1,0 +1,58 @@
+[
+  {
+    "handle": "@thepointsguy",
+    "name": "The Points Guy",
+    "description": "Travel rewards and credit card news",
+    "followers": "850K+",
+    "specialty": "travel"
+  },
+  {
+    "handle": "@doctorofcredit",
+    "name": "Doctor of Credit",
+    "description": "Credit card and bank bonus tracking",
+    "followers": "75K+",
+    "specialty": "deals"
+  },
+  {
+    "handle": "@asksebby",
+    "name": "Ask Sebby",
+    "description": "Credit card strategies and analysis",
+    "followers": "120K+",
+    "specialty": "strategy"
+  },
+  {
+    "handle": "@brianjungy",
+    "name": "Brian Jung",
+    "description": "Credit cards and personal finance",
+    "followers": "500K+",
+    "specialty": "education"
+  },
+  {
+    "handle": "@johnefinance",
+    "name": "John Eringman",
+    "description": "Personal finance and credit card tips",
+    "followers": "1.2M+",
+    "specialty": "tips"
+  },
+  {
+    "handle": "@onemileatatime",
+    "name": "One Mile at a Time",
+    "description": "Premium card usage and travel rewards",
+    "followers": "200K+",
+    "specialty": "premium"
+  },
+  {
+    "handle": "@frequentmiler",
+    "name": "Frequent Miler",
+    "description": "Manufactured spending and complex strategies",
+    "followers": "95K+",
+    "specialty": "advanced"
+  },
+  {
+    "handle": "@nerdwallet",
+    "name": "NerdWallet",
+    "description": "Credit card comparisons and guides",
+    "followers": "300K+",
+    "specialty": "comparison"
+  }
+]

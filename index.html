@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Daily - Your Daily Credit Card Newsletter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/15.0.7/marked.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-6">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-gray-900">Credit Card Daily</h1>
+                    <span class="ml-3 px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">7AM PST</span>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#latest" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Latest News</a>
+                    <a href="#bonuses" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Bonus Offers</a>
+                    <a href="#updates" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Card Updates</a>
+                    <a href="#resources" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Resources</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-4">Your Daily Credit Card Intelligence</h2>
+            <p class="text-xl mb-8 opacity-90">Stay ahead with the latest bonuses, updates, and industry insights delivered every morning at 7AM PST</p>
+            <div class="inline-flex items-center bg-white bg-opacity-20 backdrop-blur-sm rounded-lg px-6 py-3">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                </svg>
+                <span class=\"font-medium\">Last updated: <span id="lastUpdated">Loading...</span></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Latest News Section -->
+        <section id="latest" class="mb-16">
+            <div class="flex items-center justify-between mb-8">
+                <h2 class="text-3xl font-bold text-gray-900">Latest News</h2>
+                <button id="generateNews" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors">
+                    Generate Latest News
+                </button>
+            </div>
+            <div id="newsContainer" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <!-- News items will be loaded here -->
+            </div>
+        </section>
+
+        <!-- Bonus Offers Section -->
+        <section id="bonuses" class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Current Bonus Offers</h2>
+            <div id="bonusContainer" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Bonus offers will be loaded here -->
+            </div>
+        </section>
+
+        <!-- Card Updates Section -->
+        <section id="updates" class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Recent Card Updates</h2>
+            <div id="updatesContainer" class="space-y-6">
+                <!-- Card updates will be loaded here -->
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources" class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Resources</h2>
+            <div class="grid gap-8 lg:grid-cols-3">
+                <!-- Twitter Influencers -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                        </svg>
+                        X (Twitter) Influencers
+                    </h3>
+                    <div id="influencersContainer" class="space-y-3">
+                        <!-- Influencers will be loaded here -->
+                    </div>
+                </div>
+
+                <!-- Reddit Communities -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/>
+                        </svg>
+                        Reddit Communities
+                    </h3>
+                    <div class="space-y-3">
+                        <a href="https://reddit.com/r/creditcards" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div class="font-medium text-gray-900">r/creditcards</div>
+                            <div class="text-sm text-gray-600">General card discussions and advice</div>
+                        </a>
+                        <a href="https://reddit.com/r/churning" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div class="font-medium text-gray-900">r/churning</div>
+                            <div class="text-sm text-gray-600">Maximizing credit card bonuses</div>
+                        </a>
+                        <a href="https://reddit.com/r/personalfinance" target="_blank" class="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <div class="font-medium text-gray-900">r/personalfinance</div>
+                            <div class="text-sm text-gray-600">Broader finance advice including cards</div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Reputable Sources -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd"></path>
+                        </svg>
+                        Reputable Sources
+                    </h3>
+                    <div id="sourcesContainer" class="space-y-3">
+                        <!-- Sources will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Daily Post Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Today's Analysis</h2>
+            <div id="dailyPostContainer" class="bg-white rounded-xl shadow-sm border border-gray-200 p-8">
+                <div class="text-center text-gray-500">
+                    <div class="animate-spin inline-block w-6 h-6 border-[3px] border-current border-t-transparent text-blue-600 rounded-full mb-4"></div>
+                    <p>Loading today's analysis...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Credit Card Daily</h3>
+                <p class="text-gray-600 mb-4">Your trusted source for daily credit card news and insights</p>
+                <p class="text-sm text-gray-500">Updates automatically every day at 7:00 AM PST</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
